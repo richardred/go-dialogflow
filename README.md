@@ -1,7 +1,9 @@
 # go-dialogflow
+
 <div align="center">
 	<img src="logo.png" width="50%"/>
 </div>
+
 A Go library that provides basic functionality for interfacing with the Dialogflow v2 API without having to use the online UI. This allows for the complete automation of creating and editing agents and their parameters (intents, entities, etc.) via scripting. Only basic operations are implemented, but more functionality will be added in the future.
 
 Dialogflow's old v1 API is [set to be deprecated](https://dialogflow.com/docs/reference/v1-v2-migration-guide) on 23 October 2019 and the few existing libraries were all written for v1; this v2 library was created out of necessity to avoid having to migrate between versions after just a few months of use.
