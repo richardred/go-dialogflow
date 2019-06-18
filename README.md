@@ -1,11 +1,27 @@
 # go-dialogflow
-A Go library that provides basic functionality for manipulating Dialogflow agents without having to use the online UI. This allows for the complete automation of creating and editing agents and their parameters (intents, entities, etc.) via scripting. Only basic operations are implemented, but more functionality will be added in the future.
+A Go library that provides basic functionality for interfacing with the Dialogflow v2 API without having to use the online UI. This allows for the complete automation of creating and editing agents and their parameters (intents, entities, etc.) via scripting. Only basic operations are implemented, but more functionality will be added in the future.
 
-## How to use
+Dialogflow's old v1 API is [set to be deprecated](https://dialogflow.com/docs/reference/v1-v2-migration-guide) on 23 October 2019 and the few existing libraries were all written for v1; this v2 library was created out of necessity to avoid having to migrate between versions after just a few months of use.
+
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Documentation](#documentation)
+* [License](#license)
+
+## Prerequisites
+Create a [DialogFlow account](https://dialogflow.com/).
+
+## Installation
+```shell
+go get -u github.com/richardred/go-dialogflow
+```
+
+## Usage
 Create a service account at https://console.developers.google.com/apis/credentials, save the generated credentials file (keys.json in this repository), and use it to create an authenticated Dialogflow API client.
 
-```go
-data, err := ioutil.ReadFile("keys.json")
+```golang
+data, err := ioutil.ReadFile("keys.json") //replace keys.json with your own service account credentials file
 if err != nil {
   log.Fatal(err)
 }
@@ -27,6 +43,9 @@ There are several other ways to obtain a valid access token, but this one was th
 * [Google Go Library](https://godoc.org/golang.org/x/oauth2/google) - provides support for making OAuth2 authorized and authenticated HTTP requests to Google APIs. Supports the Web server flow, client-side credentials, service accounts, Google Compute Engine service accounts, and Google App Engine service accounts
 
 * [Dialogflow APIv2](https://cloud.google.com/dialogflow/docs/reference/rest/v2-overview) - builds conversational interfaces (for example, chatbots, and voice-powered apps and devices)
+
+## Documentation
+Documentation is available at https://dialogflow.com/docs.
 
 ## License
 This project is licensed under the MIT License - see the [License](LICENSE) file for details
