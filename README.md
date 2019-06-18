@@ -1,5 +1,7 @@
 # go-dialogflow
-A Go library that provides basic functionality for manipulating Dialogflow agents without having to use the online UI. This allows for the complete automation of creating and editing agents and their parameters (intents, entities, etc.) via scripting. Only basic operations are implemented, but more functionality will be added in the future.
+A Go library that provides basic functionality for interfacing with the Dialogflow v2 API without having to use the online UI. This allows for the complete automation of creating and editing agents and their parameters (intents, entities, etc.) via scripting. Only basic operations are implemented, but more functionality will be added in the future.
+
+Dialogflow's old v1 API is set to deprecated on 23 October 2019 and the few existing libraries were all written for v1; this v2 library was created out of necessity to avoid having to migrate between versions after just a few months of use.
 
 ## How to use
 Create a service account at https://console.developers.google.com/apis/credentials, save the generated credentials file (keys.json in this repository), and use it to create an authenticated Dialogflow API client.
