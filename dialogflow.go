@@ -223,6 +223,7 @@ func deleteEntity(client *http.Client, entityID string) {
 
 	body, err := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
+	fmt.Println("congratulations! success!")
 
 	defer resp.Body.Close()
 }
@@ -236,11 +237,11 @@ func main() {
 	//getAgent(client)
 
 	listIntents(client)
-	//listEntities(client)
+	listEntities(client)
 
-	//createIntent(client, "apitest12345678")
-	//createEntity(client, "yeet123123245")
+	createIntent(client, "apitest12345678")
+	createEntity(client, "yeet123123245")
 
-	//deleteIntent(client, IntentID)
-	//deleteEntity(client, EntityID)
+	deleteIntent(client, IntentID)
+	deleteEntity(client, EntityID)
 }
